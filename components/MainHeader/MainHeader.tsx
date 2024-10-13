@@ -3,6 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import classes from "./MainHeader.module.scss";
 import MainHeaderBackground from "./MainHeaderBackground";
+import NavLink from "./NavLink";
 
 const MainHeader = () => {
   return (
@@ -16,12 +17,8 @@ const MainHeader = () => {
 
         <nav className={classes.nav}>
           <ul>
-            <li>
-              <Link href="/meals">Browse Meals</Link>
-            </li>
-            <li>
-              <Link href="/community">Foodies Community</Link>
-            </li>
+            <NavLink href="/meals">Browse Meals</NavLink>
+            <NavLink href="/community">Foodies Community</NavLink>
           </ul>
         </nav>
       </header>
