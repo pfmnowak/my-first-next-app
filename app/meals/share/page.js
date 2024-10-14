@@ -2,6 +2,8 @@ import ImagePicker from "@/components/Meals/ImagePicker";
 import classes from "./page.module.scss";
 
 export default function ShareMealPage() {
+  const shareMeal = () => {};
+
   return (
     <>
       <header className={classes.header}>
