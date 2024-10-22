@@ -1,6 +1,7 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 "use server";
 
+import { revalidatePath } from "next/cache";
 import { redirect } from "next/navigation";
 import { saveMeal } from "./meals";
 
@@ -38,5 +39,6 @@ export const shareMeal = async (
   }
 
   await saveMeal(meal);
+  revalidatePath("/meals", "layout");
   redirect("/meals");
 };
